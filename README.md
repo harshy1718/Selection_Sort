@@ -3,6 +3,7 @@
 void selectionsort(int array[], int size) {
 
 // in this function we go through the array and find the minimum element and then replace it with the first element and then with second element and so on
+
     for (int i = 0; i < size; i++) {
         int mini = array[i];
         int minindex = i;
@@ -18,6 +19,7 @@ void selectionsort(int array[], int size) {
 
 int main () {
 // we create an array and then take input of the elements of the array and the number of elements to be taken is determined by n
+
     int array[100];
     int n;
     cout << "Enter the size of the array : ";

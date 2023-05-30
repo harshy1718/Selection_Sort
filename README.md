@@ -28,10 +28,9 @@ It's important to note that Selection Sort has a time complexity of O(n^2), whic
 
 # Function Description
 
-void selectionsort(int array[], int size) {
+In this function we go through the array and find the minimum element and then replace it with the first element and then with second element and so on
 
-// in this function we go through the array and find the minimum element and then replace it with the first element and then with second element and so on
-
+    void selectionsort(int array[], int size) {
     for (int i = 0; i < size; i++) {
         int mini = array[i];
         int minindex = i;
@@ -39,15 +38,15 @@ void selectionsort(int array[], int size) {
            if (array[j] < mini) {
             mini = array[j];
             minindex = j;
-           }
+               }
+            }
+          swap(array[i],array[minindex]);
         }
-        swap(array[i],array[minindex]);
     }
-}
 
-int main () {
-// we create an array and then take input of the elements of the array and the number of elements to be taken is determined by n
+We create an array and then take input of the elements of the array and the number of elements to be taken is determined by n
 
+    int main () {
     int array[100];
     int n;
     cout << "Enter the size of the array : ";
@@ -56,10 +55,11 @@ int main () {
     for (int i = 0; i < n; i++) {
         cin >> array[i];
     }
-    // After that we call the function selectionsort which makes changes in the array and sorts it
+  After that we call the function selectionsort which makes changes in the array and sorts it
+  
     selectionsort(array,n);
     //Now we print the array
     for (int i = 0; i < n; i++) {
         cout << array[i] << " ";
     }
-}
+    } 
